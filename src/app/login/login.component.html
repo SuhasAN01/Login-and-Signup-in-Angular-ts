@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="login-reg-panel">
+        <div class="login-info-box">
+            <h2>Have an account?</h2>
+            
+            <label id="label-register" for="log-reg-show">Login</label>
+            <input type="radio" name="active-log-panel" id="log-reg-show" checked="checked">
+        </div>
+
+        <div class="register-info-box">
+            <h2>Don't have an account?</h2>
+
+            <label id="label-login" for="log-login-show">Register</label>
+            <input type="radio" name="active-log-panel" id="log-login-show">
+        </div>
+
+        <div class="white-panel">
+            <div class="login-show">
+                <h2>LOGIN</h2>
+                <input type="text" name="userName" placeholder="User name" [(ngModel)]="loginObj.userName"><br>
+                <input type="password" name="password" placeholder="Password" [(ngModel)]="loginObj.password"><br>
+
+                <button class="bt1" role="button" (click)="onLogin()"><span class="text">Login</span><span>Welcome!</span></button>
+
+            </div>
+            <div class="register-show">
+                <h2 class="reg">REGISTER</h2>
+                <input type="text" name="txt" placeholder="User name" [(ngModel)]="signupObj.userName"><br><br>
+                <input type="email" name="email" placeholder="Email" [(ngModel)]="signupObj.email"><br><br>
+                <input type="password" name="pswd" placeholder="Enter Password" [(ngModel)]="signupObj.password"><br><br>
+                
+
+                <button class="bt2" (click)="onSignUp()" role="button">Sign Up</button>
+
+            </div>
+        </div>
+    </div>
+</div>
